@@ -1,33 +1,41 @@
 import './post.css'
 import {MoreVert} from '@mui/icons-material'
+import { Users} from '../../Dummy'
 
-function Post() {
+function Post({post}) {
+    // const user = Users.filter(u=>
+    // u.id===1)
+    // console.log(user[0].username)
+    const user= Users.filter((u) => u.id === post?.userId)
+    
   return (
     <div className='post'>
         <div className='postWrapper'>
             <div className='postTop'>
                 <div className='postTopLeft'>
-                    <img className='postTopLeftImg' src='/assets/kisho.JPG' alt=""/>
-                    <span className='postUserName'> Kishomi</span>
-                    <span className='postData'> 5 mis ago</span>
+                    <img className='postTopLeftImg' src={user[0].profilePicture} alt=""/>
+                    <span className='postUserName'> 
+                    {user[0].username} 
+                    </span>
+                    <span className='postData'> {post.data}</span>
                 </div>
                 <div className='postTopRight'>
                     <MoreVert className='postTopRightIcon'/>
                 </div>
             </div>
             <div className='postCenter'>
-                <span className='postText'> Hey! Its my first post:) </span>
-                <img className='postImg' src="/assets/cover.jpg" alt=""/>
+                <span className='postText'>{post.desc} </span>
+                <img className='postImg' src={post.photo} alt=""/>
 
             </div>
             <div className='postBottom'>
                 <div className='postBottomLeft'>
                     <img className='postLikeIcon' src='/assets/like.png' alt=""/>
                     <img className='postLikeIcon' src='/assets/heart.png' alt=""/>
-                    <span className='postLikeCounter'> 32 people liked it</span>
+                    <span className='postLikeCounter'> {post.like} people liked it</span>
                 </div>
                 <div className='postBottomRight'>
-                    <span className='postCommentText'> 9 comments</span>
+                    <span className='postCommentText'> {post.comment} comments</span>
                 </div>
             </div>
         </div>
