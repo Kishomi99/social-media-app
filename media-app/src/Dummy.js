@@ -21,8 +21,13 @@ export const Users = [
     },
     {
       id:5,
-      profilePicture: "assets/anu.JPG",
-      username: "Anujah Ravikumar",
+      profilePicture: "assets/kishomi.jpg",
+      username: "Itz Kishomi",
+    },
+    {
+      id:6,
+      profilePicture: "assets/menan.JPG",
+      username: "Itz Menan",
     },
     
   ];
@@ -66,11 +71,20 @@ export const Users = [
       },
       {
         id: 5,
-        desc: "Love Cats.",
-        photo: "assets/cover.jpg",
+        desc: "My Boy ❤️❤️❤️❤️❤️❤️❤️..............",
+        photo: "assets/menan.JPG",
         data: "2 years ago",
         userId: 5,
         like: 3,
+        comment: 100,
+      },
+      {
+        id: 6,
+        desc: "My Pisasu 💓❤️❤️❤️❤️.",
+        photo: "assets/kishomi.jpg",
+        data: "1 years ago",
+        userId: 6,
+        like: 25,
         comment: 100,
       },
     
